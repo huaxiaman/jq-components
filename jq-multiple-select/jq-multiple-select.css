@@ -1,0 +1,201 @@
+/* reset */
+/* start Ĭ����ʽ */
+html, body {
+  height: 100%;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, th, td, input, select, form, textarea {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: 'Microsoft Yahei';
+  color: #333;
+  font-weight: normal;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+li {
+  list-style: none;
+  overflow: hidden;
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333
+}
+
+img {
+  border: none;
+  vertical-align: top;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+strong {
+  font-weight: normal;
+}
+
+i, em {
+  font-style: normal;
+}
+
+/* 多选下拉框 */
+
+.multiple-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+  background: #fff;
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+  border-radius: 0.208rem;
+}
+
+.multiple-select.is-disabled {
+  background-color: #e7e7e7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.multiple-select-body {
+  position: relative;
+  padding: 0 24px 0 4px;
+}
+
+.multiple-select-content {
+  height: 28px;
+  line-height: normal;
+  white-space: normal;
+}
+
+.multiple-select-content.auto-height {
+  height: auto;
+}
+
+.multiple-selected-label {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  margin: 3px 4px 3px 0;
+  padding: 0 18px 0 8px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #909399;
+  border-radius: 4px;
+  background-color: #f0f2f5;
+  white-space: nowrap;
+}
+
+.multiple-selected-label b {
+  font-weight: normal;
+}
+
+.multiple-selected-label i {
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("img/close2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% auto;
+  right: 2px;
+  top: 50%;
+  margin-top: -6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.multiple-select-status {
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  right: 0.417rem;
+  top: 50%;
+  width: 10px;
+  width: 0.521rem;
+  height: 10px;
+  height: 0.521rem;
+  margin-top: -4px;
+  margin-top: -0.208rem;
+  background-image: url("img/select_arrow.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  z-index: 2;
+  transition: all .3s;
+}
+
+.multiple-select.active .multiple-select-status {
+  background-image: url("img/select_arrow2.png");
+  /*transform: rotate(180deg);*/
+}
+
+.multiple-select-options {
+  display: none;
+  width: 100%;
+  max-height: 250px;
+  max-height: 13.021rem;
+  overflow-y: auto;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-radius: 0.208rem;
+  background: #fff;
+  top: 32px;
+  left: -1px;
+  z-index: 99;
+}
+
+.multiple-select-options li {
+  position: relative;
+  padding: 10px 24px 10px 14px;
+  line-height: 1;
+  font-size: 14px;
+  font-size: 0.729rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.multiple-select-options li::after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  background-image: url("_blank");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.multiple-select-options li.selected {
+  color: #3DBDB6;
+}
+
+.multiple-select-options li:hover {
+  background: #f3f3f3;
+}
+
+.multiple-select-options li.selected::after {
+  background-image: url("img/correct.png");
+}
